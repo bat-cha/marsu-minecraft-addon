@@ -1,0 +1,21 @@
+# Minecraft specific
+*.mcworld
+*.mctemplate
+build/
+dist/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Node modules (if using build tools)
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.log
