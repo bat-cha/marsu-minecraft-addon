@@ -1,0 +1,50 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "marsu:marsupilami",
+      "population_control": "animal"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_underground": false,
+        "minecraft:spawns_underwater": false,
+        "minecraft:weight": {
+          "default": 5
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 2
+        },
+        "minecraft:permute_type": [
+          {
+            "weight": 100
+          }
+        ],
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "jungle"
+        },
+        "minecraft:brightness_filter": {
+          "min": 7,
+          "max": 15,
+          "adjust_for_weather": true
+        },
+        "minecraft:difficulty_filter": {
+          "min": "peaceful",
+          "max": "hard"
+        },
+        "minecraft:distance_filter": {
+          "min": 24.0,
+          "max": 44.0
+        },
+        "minecraft:height_filter": {
+          "min": 62,
+          "max": 90
+        }
+      }
+    ]
+  }
+}

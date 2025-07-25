@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Marsupilami Resource Pack",
+    "description": "Resource pack for the Marsupilami add-on with textures, models, and animations",
+    "uuid": "36803e39-c1c2-4a8e-9ea7-28750fe53600",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "22233e87-15a0-4432-8151-046bf19c0305",
+      "version": [1, 0, 0]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+# CORRECTED MARSUPILAMI TEXTURE TEMPLATE (128x128 pixels)
+# 
+# This is a text placeholder that needs to be replaced with an actual PNG image.
+# The texture should be created using image editing software like GIMP, Photoshop, or BlockBench.
+#
+# AUTHENTIC MARSUPILAMI DESIGN SPECIFICATIONS:
+# - Base color: Bright golden/yellow (#FFD700 or similar)
+# - Spots: Black leopard-like spots scattered across body (#000000)
+# - Eyes: Large, expressive eyes with white sclera merged together for males
+# - Nose: Large black nose (#000000)  
+# - Ears: Dog-like floppy ears with yellow base and pink inside
+# - Snout: Slightly elongated with black nose
+#
+# CORRECTED TEXTURE MAPPING (based on actual UV coordinates in geometry):
+# 
+# FACE & HEAD (front-facing orientation):
+# - Head: UV [0,0] to [6,6] - Main head cube (6x6x4 size)
+#   * Top face: forehead area 
+#   * Front face: main face with eyes, nose area
+#   * Side faces: cheek areas
+# - Snout: UV [0,16] to [3,2] - Small protruding nose area (3x2x2 size)
+#   * Front: black nose tip
+#   * Top/bottom: snout bridge
+# - Left Ear: UV [16,0] to [2,3] - Floppy ear (2x3x1 size)  
+# - Right Ear: UV [22,0] to [2,3] - Floppy ear (2x3x1 size)
+#
+# BODY PARTS:
+# - Body: UV [0,32] to [8,6] - Main torso (8x6x12 size)
+#   * Top: back area with spots
+#   * Front: chest/belly (lighter, fewer spots)
+#   * Sides: flanks with prominent spots
+# - Left Arm: UV [32,0] to [2,8] - Front limb (2x8x2 size)
+# - Right Arm: UV [40,0] to [2,8] - Front limb (2x8x2 size)  
+# - Left Leg: UV [48,0] to [2,6] - Back limb (2x6x2 size)
+# - Right Leg: UV [56,0] to [2,6] - Back limb (2x6x2 size)
+#
+# TAIL SEGMENTS (tapering from thick to thin):
+# - Tail Base: UV [0,60] - Thickest part (3x3x6 size)
+# - Tail Mid1: UV [20,60] - Second segment (2.4x2x6 size)  
+# - Tail Mid2: UV [40,60] - Third segment (2x1.6x6 size)
+# - Tail Mid3: UV [60,60] - Fourth segment (1.6x1.2x6 size)
+# - Tail Mid4: UV [80,60] - Fifth segment (1.2x0.8x6 size)
+# - Tail Tip: UV [100,60] - Final tip (0.8x0.4x4 size)
+#
+# FACE TEXTURE LAYOUT (within 6x6 head area):
+# - Eyes should be drawn on the FRONT face of the head cube
+# - Eyes positioned in upper portion (merged white sclera for males)
+# - Black nose on snout front face 
+# - Mouth/expression on lower front face
+# - Ears pink on inner faces, yellow on outer faces
+#
+# PATTERN GUIDELINES:
+# - Apply yellow base color to all body parts
+# - Add irregular black spots across body, tail, and limbs  
+# - Keep face mostly spot-free with just a few small spots
+# - Make spots larger on body/tail, smaller on limbs
+# - Tail segments should have consistent spot pattern flowing along length
+# - Ensure spots don't interfere with facial features
+#
+# ADDITIONAL DETAILS:
+# - Use anti-aliasing for smooth spot edges
+# - Add subtle shading for depth (darker yellow in recessed areas)
+# - Pink inner ears and tongue details
+# - White highlights in eyes for expressiveness
+# - Gradient from thick tail base to thin tail tip
+#
+# To implement: Create a 128x128 PNG file following these CORRECTED specifications
+# and replace this text file with the actual image.

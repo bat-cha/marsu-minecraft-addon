@@ -1,0 +1,47 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "entity.marsu.marsupilami.ambient": {
+      "category": "neutral",
+      "max_distance": 16.0,
+      "sounds": [
+        {
+          "name": "sounds/entity/marsupilami/houba",
+          "volume": 0.8,
+          "pitch": 1.0
+        }
+      ]
+    },
+    "entity.marsu.marsupilami.hurt": {
+      "category": "neutral",
+      "max_distance": 16.0,
+      "sounds": [
+        {
+          "name": "sounds/entity/marsupilami/houba",
+          "volume": 1.0,
+          "pitch": 1.2
+        }
+      ]
+    },
+    "entity.marsu.marsupilami.death": {
+      "category": "neutral",
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/entity/marsupilami/houba",
+          "volume": 1.2,
+          "pitch": 0.8
+        }
+      ]
+    },
+    "entity.marsu.marsupilami.step": {
+      "category": "neutral",
+      "max_distance": 8.0,
+      "sounds": [
+        "sounds/step/grass1",
+        "sounds/step/grass2",
+        "sounds/step/grass3"
+      ]
+    }
+  }
+}

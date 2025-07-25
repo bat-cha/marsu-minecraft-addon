@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "marsu:marsupilami",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/marsupilami/marsupilami"
+      },
+      "geometry": {
+        "default": "geometry.marsupilami"
+      },
+      "animations": {
+        "setup": "animation.marsupilami.setup",
+        "walk": "animation.marsupilami.walk",
+        "idle": "animation.marsupilami.idle",
+        "tail_swing": "animation.marsupilami.tail_swing",
+        "jump": "animation.marsupilami.jump"
+      },
+      "render_controllers": [
+        "controller.render.marsupilami"
+      ]
+    }
+  }
+}
