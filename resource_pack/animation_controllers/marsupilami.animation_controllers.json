@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.marsupilami.move": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"moving": "query.modified_move_speed > 0.1"
+						},
+						{
+							"jumping": "query.is_jumping"
+						}
+					],
+					"animations": [
+						"default_pose"
+					]
+				},
+				"moving": {
+					"transitions": [
+						{
+							"default": "query.modified_move_speed < 0.1"
+						},
+						{
+							"jumping": "query.is_jumping"
+						}
+					],
+					"animations": [
+						"walk"
+					]
+				},
+				"jumping": {
+					"transitions": [
+						{
+							"default": "!query.is_jumping && query.modified_move_speed < 0.1"
+						},
+						{
+							"moving": "!query.is_jumping && query.modified_move_speed > 0.1"
+						}
+					],
+					"animations": [
+						"jump"
+					]
+				}
+			}
+		},
+		"controller.animation.marsupilami.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacking": "query.is_delayed_attacking"
+						}
+					]
+				},
+				"attacking": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"animations": [
+						"attack"
+					]
+				}
+			}
+		}
+	}
+}

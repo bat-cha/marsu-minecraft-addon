@@ -2,19 +2,19 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "marsu:marsupilami",
+			"identifier": "marsu:bobo",
 			"min_engine_version": "1.8.0",
 			"materials": {
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/marsupilami"
+				"default": "textures/entity/bobo"
 			},
 			"animations": {
-				"walk": "animation.marsupilami.walk",
-				"jump": "animation.marsupilami.jump",
-				"attack": "animation.marsupilami.attack",
-				"default_pose": "animation.marsupilami.default_pose",
+				"walk": "animation.bobo.walk",
+				"jump": "animation.bobo.jump",
+				"attack": "animation.bobo.attack",
+				"default_pose": "animation.bobo.default_pose",
 				"move": "controller.animation.marsupilami.move",
 				"general": "controller.animation.marsupilami.general"
 			},
@@ -22,13 +22,13 @@
 				"animate": ["move", "general"]
 			},
 			"geometry": {
-				"default": "geometry.marsupilami"
+				"default": "geometry.bobo"
 			},
 			"render_controllers": ["controller.render.marsupilami"],
 			"enable_attachables": true,
 			"spawn_egg": {
-				"base_color": "#ffe100",
-				"overlay_color": "#313131"
+				"base_color": "#00032c",
+				"overlay_color": "#cbcc77"
 			}
 		}
 	}

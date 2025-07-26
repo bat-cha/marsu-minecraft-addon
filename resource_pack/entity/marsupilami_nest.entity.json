@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "marsu:marsupilami_nest",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/marsupilami_nest"
+			},
+			"animations": {
+				"default_pose": "animation.marsupilami_nest.default_pose"
+			},
+			"scripts": {
+				"animate": ["default_pose"]
+			},
+			"geometry": {
+				"default": "geometry.marsupilami_nest"
+			},
+			"render_controllers": ["controller.render.marsupilami"],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#416900",
+				"overlay_color": "#cca777"
+			}
+		}
+	}
+}
