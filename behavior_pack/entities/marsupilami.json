@@ -1,5 +1,5 @@
 {
-  "format_version": "1.16.0",
+  "format_version": "1.20.80",
   "minecraft:entity": {
     "description": {
       "identifier": "marsu:marsupilami",
@@ -174,12 +174,6 @@
       },
       "minecraft:despawn": {
         "despawn_from_distance": {}
-      },
-      "minecraft:sound_effects": {
-        "ambient": "entity.marsu.marsupilami.ambient",
-        "hurt": "entity.marsu.marsupilami.hurt",
-        "death": "entity.marsu.marsupilami.death",
-        "step": "entity.marsu.marsupilami.step"
       },
       "minecraft:behavior.leap_at_target": {
         "priority": 2,

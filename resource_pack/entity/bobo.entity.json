@@ -29,6 +29,9 @@
 			"spawn_egg": {
 				"base_color": "#00032c",
 				"overlay_color": "#cbcc77"
+			},
+			"sound_effects": {
+				"ambient": "entity.marsu.bobo.ambient"
 			}
 		}
 	}

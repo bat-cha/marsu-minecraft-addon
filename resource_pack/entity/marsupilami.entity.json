@@ -1,5 +1,5 @@
 {
-	"format_version": "1.10.0",
+	"format_version": "1.20.80",
 	"minecraft:client_entity": {
 		"description": {
 			"identifier": "marsu:marsupilami",
@@ -29,6 +29,12 @@
 			"spawn_egg": {
 				"base_color": "#ffe100",
 				"overlay_color": "#313131"
+			},
+			"sound_effects": {
+				"ambient": "entity.marsu.marsupilami.ambient",
+				"hurt": "entity.marsu.marsupilami.hurt",
+				"death": "entity.marsu.marsupilami.death",
+				"step": "entity.marsu.marsupilami.step"
 			}
 		}
 	}

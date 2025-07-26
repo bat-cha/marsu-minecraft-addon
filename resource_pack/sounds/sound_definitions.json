@@ -1,0 +1,47 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "entity.marsu.marsupilami.ambient": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    },
+    "entity.marsu.marsupilami.hurt": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    },
+    "entity.marsu.marsupilami.death": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    },
+    "entity.marsu.marsupilami.step": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    },
+    "entity.marsu.bibi.ambient": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    },
+    "entity.marsu.bobo.ambient": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    },
+    "entity.marsu.bibu.ambient": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/marsupilami/houba"
+      ]
+    }
+  }
+}
