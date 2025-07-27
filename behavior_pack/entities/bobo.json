@@ -2,7 +2,7 @@
   "format_version": "1.20.80",
   "minecraft:entity": {
     "description": {
-      "identifier": "marsu:marsupilami",
+      "identifier": "marsu:bobo",
       "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": false
@@ -10,12 +10,11 @@
     "component_groups": {
       "marsu:wild": {
         "minecraft:tameable": {
-          "probability": 0.33,
+          "probability": 0.3,
           "tame_items": [
             "minecraft:apple",
             "minecraft:sweet_berries",
-            "minecraft:melon_slice",
-            "minecraft:tropical_fish"
+            "minecraft:melon_slice"
           ],
           "tame_event": {
             "event": "marsu:on_tame",
@@ -31,9 +30,9 @@
                 "subject": "other",
                 "value": "player"
               },
-              "max_dist": 6,
-              "walk_speed_multiplier": 1.5,
-              "sprint_speed_multiplier": 2.0
+              "max_dist": 9,
+              "walk_speed_multiplier": 1.2,
+              "sprint_speed_multiplier": 1.7
             }
           ]
         }
@@ -42,9 +41,9 @@
         "minecraft:is_tamed": {},
         "minecraft:behavior.follow_owner": {
           "priority": 6,
-          "speed_multiplier": 1.0,
-          "start_distance": 10,
-          "stop_distance": 2
+          "speed_multiplier": 0.9,
+          "start_distance": 12,
+          "stop_distance": 3
         },
         "minecraft:behavior.owner_hurt_by_target": {
           "priority": 1
@@ -57,10 +56,10 @@
       "marsu:baby": {
         "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value": 0.5
+          "value": 0.35
         },
         "minecraft:ageable": {
-          "duration": 1200,
+          "duration": 1000,
           "feed_items": [
             "minecraft:apple",
             "minecraft:sweet_berries"
@@ -72,21 +71,21 @@
         },
         "minecraft:behavior.follow_parent": {
           "priority": 5,
-          "speed_multiplier": 1.1
+          "speed_multiplier": 1.25
         }
       }
     },
     "components": {
       "minecraft:type_family": {
-        "family": ["marsu_marsupilami", "mob", "animal"]
+        "family": ["marsu_bobo", "mob", "animal"]
       },
       "minecraft:collision_box": {
-        "width": 0.6,
-        "height": 1.2
+        "width": 0.5,
+        "height": 0.9
       },
       "minecraft:health": {
-        "value": 20,
-        "max": 20
+        "value": 16,
+        "max": 16
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -103,7 +102,7 @@
         ]
       },
       "minecraft:movement": {
-        "value": 0.35
+        "value": 0.32
       },
       "minecraft:navigation.walk": {
         "can_path_over_water": false,
@@ -125,11 +124,15 @@
         "items": [
           {
             "item": "minecraft:apple",
-            "heal_amount": 2
+            "heal_amount": 3
           },
           {
             "item": "minecraft:sweet_berries",
             "heal_amount": 1
+          },
+          {
+            "item": "minecraft:melon_slice",
+            "heal_amount": 2
           }
         ]
       },
@@ -138,7 +141,7 @@
       },
       "minecraft:behavior.panic": {
         "priority": 1,
-        "speed_multiplier": 1.5
+        "speed_multiplier": 1.4
       },
       "minecraft:behavior.breed": {
         "priority": 3,
@@ -146,15 +149,16 @@
       },
       "minecraft:behavior.tempt": {
         "priority": 7,
-        "speed_multiplier": 1.25,
+        "speed_multiplier": 1.2,
         "items": [
           "minecraft:apple",
-          "minecraft:sweet_berries"
+          "minecraft:sweet_berries",
+          "minecraft:melon_slice"
         ]
       },
       "minecraft:behavior.random_stroll": {
         "priority": 8,
-        "speed_multiplier": 1.0
+        "speed_multiplier": 0.95
       },
       "minecraft:behavior.look_at_player": {
         "priority": 9,
@@ -179,27 +183,18 @@
       },
       "minecraft:behavior.leap_at_target": {
         "priority": 2,
-        "yd": 0.8,
-        "target_dist": 2.0
+        "yd": 0.5,
+        "target_dist": 2.2
       },
       "minecraft:jump.static": {
-        "jump_power": 0.8
-      },
-      "minecraft:rideable": {
-        "seat_count": 1,
-        "family_types": [
-          "player"
-        ],
-        "seats": {
-          "position": [0.0, 0.9, 0.0]
-        }
+        "jump_power": 0.6
       }
     },
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
           {
-            "weight": 95,
+            "weight": 93,
             "add": {
               "component_groups": [
                 "marsu:wild"
@@ -207,7 +202,7 @@
             }
           },
           {
-            "weight": 5,
+            "weight": 7,
             "add": {
               "component_groups": [
                 "marsu:wild",

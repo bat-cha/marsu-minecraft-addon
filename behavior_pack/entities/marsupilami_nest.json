@@ -1,0 +1,198 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "marsu:marsupilami_nest",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "marsu:occupied": {
+        "minecraft:timer": {
+          "time": [600.0, 1200.0],
+          "time_down_event": {
+            "event": "marsu:spawn_marsupilami",
+            "target": "self"
+          }
+        }
+      },
+      "marsu:empty": {
+        "minecraft:timer": {
+          "time": [2400.0, 4800.0],
+          "time_down_event": {
+            "event": "marsu:become_occupied",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["marsu_nest", "structure"]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 0.5
+      },
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 1
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": true,
+        "breathes_water": false,
+        "breathes_lava": false,
+        "breathes_solids": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:fire_immune": false,
+      "minecraft:loot": {
+        "table": "loot_tables/entities/marsupilami_nest.json"
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:stick"
+                  }
+                ]
+              },
+              "event": "marsu:inspect_nest",
+              "target": "self"
+            },
+            "use_item": false,
+            "play_sounds": "block.wood.hit",
+            "interact_text": "action.interact.inspect_nest"
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 60,
+            "add": {
+              "component_groups": [
+                "marsu:empty"
+              ]
+            }
+          },
+          {
+            "weight": 40,
+            "add": {
+              "component_groups": [
+                "marsu:occupied"
+              ]
+            }
+          }
+        ]
+      },
+      "marsu:become_occupied": {
+        "remove": {
+          "component_groups": [
+            "marsu:empty"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "marsu:occupied"
+          ]
+        }
+      },
+      "marsu:become_empty": {
+        "remove": {
+          "component_groups": [
+            "marsu:occupied"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "marsu:empty"
+          ]
+        }
+      },
+      "marsu:spawn_marsupilami": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": "summon marsu:marsupilami ~ ~1 ~"
+            }
+          },
+          {
+            "randomize": [
+              {
+                "weight": 70,
+                "trigger": "marsu:become_empty"
+              },
+              {
+                "weight": 30,
+                "queue_command": {
+                  "command": "summon marsu:bibi ~ ~1 ~"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "marsu:inspect_nest": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_component",
+              "value": "marsu:occupied"
+            },
+            "queue_command": {
+              "command": "tellraw @p {\"text\":\"This nest appears to be occupied. You can hear rustling sounds from within.\",\"color\":\"green\"}"
+            }
+          },
+          {
+            "filters": {
+              "test": "has_component",
+              "value": "marsu:empty"
+            },
+            "queue_command": {
+              "command": "tellraw @p {\"text\":\"This nest appears to be empty, but it looks recently used.\",\"color\":\"yellow\"}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

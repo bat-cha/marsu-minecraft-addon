@@ -11,7 +11,7 @@
 				"default": "textures/entity/marsupilami_nest"
 			},
 			"animations": {
-				"default_pose": "animation.marsupilami_nest.default_pose"
+				"default_pose": "animation.marsu_nest.no_pose"
 			},
 			"scripts": {
 				"animate": ["default_pose"]
